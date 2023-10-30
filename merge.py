@@ -23,6 +23,9 @@ def main(args):
                 if not line.strip():
                     continue
 
+                if line.strip().startswith("#"):
+                    continue
+
                 kvp = line.split('=')
                 if len(kvp) < 2:
                     print(f"Invalid key-value-pair found on line {line_number}.")
